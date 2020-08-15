@@ -1,0 +1,401 @@
+{
+    "title": "Yabai WM window control",
+    "rules" : [
+        {
+            "description": "Swap current window with left one",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --swap west"
+                  }
+                ]
+              }
+            ]
+        },
+				{	
+            "description": "Swap current window with right one",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --swap east"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Swap current window with upper one",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --swap north"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Swap current window with lower one",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --swap south"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Resize to left",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --ratio rel:-0.01"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Resize to right",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --ratio rel:0.01"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Resize to up",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --ratio rel:-0.01"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Resize to down",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_gui",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --ratio rel:0.01"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Mirror vertically",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m space $YABAI_SPACE_ID --mirror y-axis"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Mirror horizontally",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m space $YABAI_SPACEI_ID --mirror x-axis"
+                  }
+                ]
+              }
+            ]
+        },
+				{
+            "description": "Move window to left space",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_control",
+											"left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window --space prev && /usr/local/bin/yabai -m space --focus prev"
+                  }
+                ]
+              }
+            ]
+				},
+        {
+          "description": "Move window to right space",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "right_arrow",
+                "modifiers": {
+                  "mandatory": [
+                    "left_control",
+                    "left_shift"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m window --space next && /usr/local/bin/yabai -m space --focus next"
+
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Focus to left window",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "left_arrow",
+                "modifiers": {
+                  "mandatory": [
+                    "left_gui",
+                    "left_option"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m window --focus west"
+
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Focus to right window",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "right_arrow",
+                "modifiers": {
+                  "mandatory": [
+                    "left_gui",
+                    "left_option"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m window --focus east"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Focus to upper window",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "up_arrow",
+                "modifiers": {
+                  "mandatory": [
+                    "left_gui",
+                    "left_option"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m window --focus north"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Focus to lower window",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "down_arrow",
+                "modifiers": {
+                  "mandatory": [
+                    "left_gui",
+                    "left_option"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m window --focus south"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Focus to prev space",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "left_arrow",
+                "modifiers": {
+                  "mandatory": [
+                    "left_control",
+                    "left_option"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m space --focus prev"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Focus to next space",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "right_arrow",
+                "modifiers": {
+                  "mandatory": [
+                    "left_control",
+                    "left_option"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m space --focus next"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+}
