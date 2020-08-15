@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+spacebar -m config position           top
+spacebar -m config height             28
+spacebar -m config text_font          "Noto San KR:Bold:14.0"
+spacebar -m config icon_font          "VictorMono Nerd Font:Semibold:14.0"
+spacebar -m config background_color   0xff1e1f29
+spacebar -m config foreground_color   0xfffdfdfd
+spacebar -m config space_icon_color   0xff18e3c8
+spacebar -m config power_icon_color   0xfff2a272
+spacebar -m config battery_icon_color 0xff22ff8b
+spacebar -m config dnd_icon_color     0xffff8037
+spacebar -m config clock_icon_color   0xfff37f97
+spacebar -m config space_icon_strip       
+spacebar -m config power_icon_strip    
+spacebar -m config space_icon         
+spacebar -m config clock_icon         
+spacebar -m config dnd_icon           
+spacebar -m config clock_format       "%Y/%m/%d (%a) %R"
+
+echo "spacebar configuration loaded.."
