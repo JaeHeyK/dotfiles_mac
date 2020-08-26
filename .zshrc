@@ -113,3 +113,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 KEYTIMEOUT=1
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias gcc='gcc-10'
+alias cc='gcc-10'
+alias g++='g++-10'
+alias c++='g++-10'

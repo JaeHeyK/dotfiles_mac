@@ -45,6 +45,7 @@ yabai -m rule --add label="btt" app="BetterTouchTool" manage=off
 yabai -m rule --add label="spotify to space 1" app="Spotify" space=1
 yabai -m rule --add label="iterm to space 1" app="iTerm2" space=3
 
+
 #Signals
 yabai -m signal --add label="popup to float" event=window_created \
 	action='yabai -m query --windows --window $YABAI_WINDOW_ID | jq -er ".resizable == 0 and .floating == 0" && yabai -m window $YABAI_WINDOW_ID --toggle float'
