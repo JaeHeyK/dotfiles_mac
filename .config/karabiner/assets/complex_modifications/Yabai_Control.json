@@ -2,6 +2,29 @@
     "title": "Yabai WM window control",
     "rules" : [
         {
+          "description": "Load yabaiWM and spacebar",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "hyphen",
+                "modifiers": {
+                  "mandatory": [
+                    "left_control",
+                    "left_option",
+                    "left_command"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/bin/sh ~/wmstart.sh"
+                }
+              ]
+            }
+          ]
+        },
+        {
             "description": "Swap current window with left one",
             "manipulators": [
               {
