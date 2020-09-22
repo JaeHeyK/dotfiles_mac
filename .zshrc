@@ -97,6 +97,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
@@ -114,6 +115,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 KEYTIMEOUT=1
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias ffuserchrome="/usr/bin/git --git-dir=$HOME/Library/Application\ Support/Firefox/Profiles/51fw652k.default-release-1599409814181/chrome/.ffuserchrome.git --work-tree=$HOME/Library/Application\ Support/Firefox/Profiles/51fw652k.default-release-1599409814181/chrome"
 alias gcc='gcc-10'
 alias cc='gcc-10'
 alias g++='g++-10'
@@ -121,3 +123,5 @@ alias c++='g++-10'
 
 alias scrcpy_game='scrcpy --always-on-top -w -S'
 alias sndcpy='~/sndcpy-v1.0/sndcpy'
+
+alias ffProfile='cd ~/Library/Application\ Support/Firefox/Profiles/'
