@@ -308,7 +308,7 @@ Change text color in playlist
 
 /* Move navigation buttons and search field to the right and down */
 .browser-navigation-top-bar {
-	margin-left: 40px !important;
+	margin-left: 10px !important;
 	margin-top: 15px !important;
 }
 
