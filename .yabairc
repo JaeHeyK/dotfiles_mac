@@ -8,7 +8,6 @@ yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
 yabai -m config window_shadow                off
 yabai -m config window_opacity               off
-yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        1.0
 
@@ -38,9 +37,10 @@ yabai -m config window_gap                   20
 yabai -m rule --add label="finder" app="^Finder$" manage=off
 yabai -m rule --add label="system pref" app="^시스템 환경설정$" manage=off
 yabai -m rule --add label="iina" app="^IINA&" manage=off
-yabai -m rule --add label="kakaotalk" app="^카카오톡$" manage=off space=4
+yabai -m rule --add label="kakaotalk" app="카카오톡" manage=off space=4
 yabai -m rule --add label="wireless diag" app="무선 진단" manage=off
 yabai -m rule --add label="firefox pip" app="^Firefox$" title="화면 속 화면" manage=off
+yabai -m rule --add label="unity hub" app="Unity Hub" manage=off
 yabai -m rule --add label="karabiner" app="Karabiner*" manage=off
 yabai -m rule --add label="Speedtest" app="Speedtest" manage=off
 yabai -m rule --add label="keka" app="Keka*" manage=off
@@ -48,7 +48,9 @@ yabai -m rule --add label="btt" app="BetterTouchTool" manage=off
 yabai -m rule --add label="spotify to space 1" app="Spotify" space=1
 yabai -m rule --add label="iterm to space 1" app="iTerm2" space=3
 yabai -m rule --add label="scrcpy float" app="scrcpy" manage=off
+yabai -m rule --add label="System Info" title="시스템 정보" manage=off
 yabai -m rule --add label="About Mac" title="이 Mac에 관하여" manage=off
+yabai -m rule --add label="Android Emulator" app="Android Emulator*" manage=off
 
 #Signals
 yabai -m signal --add label="popup to float" event=window_created \

@@ -243,6 +243,27 @@
             ]
         },
 				{
+           "description": "Rotate space for 90 deg",
+           "manipulators": [
+             {
+               "type": "basic",
+               "from": {
+                 "key_code": "j",
+                 "modifiers": {
+                   "mandatory": [
+                     "left_control"
+                   ]
+                }
+             },
+           "to": [
+             {
+              "shell_command": "/usr/local/bin/yabai -m space $YABAI_SPACEI_ID --rotate 90"
+              }
+           ]
+              }
+            ]
+        },
+			{
             "description": "Move window to left space",
             "manipulators": [
               {

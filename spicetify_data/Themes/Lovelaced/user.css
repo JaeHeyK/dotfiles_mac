@@ -125,6 +125,10 @@
 	opacity: 1!important;
 }
 
+.sidebar .sidebar-navbar {
+	padding-top: 30px!important;
+}
+
 .view-player .player-controls-container,
 .view-player .player-controls-container .controls {
 	overflow: visible !important;
