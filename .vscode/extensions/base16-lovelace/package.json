@@ -1,0 +1,23 @@
+{
+  "name": "base16-lovelace",
+  "version": "1.0.0",
+  "description": "Base16 lovelace colorscheme for Visual Studio Code",
+  "author": "JaeHeyK",
+  "publisher": "JaeHeyK",
+  "engines": {
+      "vscode": "^1.0.0"
+  },
+  "categories": [
+      "Themes"
+  ],
+  "contributes": {
+      "themes": [
+          {
+              "label": "Lovelace",
+              "uiTheme": "vs-dark",
+              "path": "./themes/base16-lovelace.json"
+          }
+      ]
+  },
+  "license": "MIT"
+}
