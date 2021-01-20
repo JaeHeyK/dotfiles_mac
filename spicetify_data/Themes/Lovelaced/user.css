@@ -125,8 +125,9 @@
 	opacity: 1!important;
 }
 
+/*Adjust to MacOS Big Sur Close/Min/Max Buttons */
 .sidebar .sidebar-navbar {
-	padding-top: 30px!important;
+	padding-top: 0px !important;
 }
 
 .view-player .player-controls-container,
@@ -236,6 +237,13 @@ form, so I move last cover to the right 20px and first one to the left 20px
 .glue-page-header__background-color {
 	background-image: none !important;
 	background: var(--modspotify_main_bg);
+}
+
+.button.button-blue {
+  padding-top: 1px;
+  border-radius: 16px;
+  color: var(--modspotify_main_bg);
+  transition-property: transform, box-shadow, color, background-color;
 }
 
 /* .glue-page-header__sticky {
@@ -592,8 +600,13 @@ span.glue-page-header__title-text {
 
 .progress-container .inner {
 	border-radius: 0 2px 2px 0 !important;
-	background-color: var(--modspotify_main_fg) !important;
-	box-shadow: 0 2px 20px 0 var(--modspotify_main_fg);
+	background: linear-gradient(to right, #3262FF, #AD54F0) !important;
+	box-shadow: 0 2px 20px 0 linear-gradient(to right, #3262FF, #AD54F0);
+}
+
+.progress-container .inner .handle{
+  border: #AD54F0;
+	background:  #AD54F0 !important;
 }
 
 
@@ -674,3 +687,53 @@ body.remotebar .view-player .player-bar-wrapper {
 .Header__image-inner {
 	box-shadow: unset;
 }
+
+.tl-row.selected .tl-cell{
+	background: transparent !important;
+	/* background: linear-gradient(to right, #00A63F, #006AD7) !important;
+	background: no-repeat !important; */
+}
+
+.tl-row.selected{
+	background: linear-gradient(to right, #3262FF, #AD54F0) !important;
+	/* transition: background 1s; */
+	background-size: 400% 400% !important;
+
+	-webkit-animation: AnimationName 20s ease infinite !important;
+	-moz-animation: AnimationName 20s ease infinite !important;
+	animation: AnimationName 20s ease infinite !important;
+}
+
+.tl-row:hover {
+	background: linear-gradient(to right, #3262FF, #AD54F0) !important;
+	-webkit-transform: 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+	-moz-transition-property:width,height,background,font-size,opacity;
+}
+
+.tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell{
+	background: transparent !important;
+}
+
+.tl-row.selected:hover {
+	background: linear-gradient(to right, #3262FF, #AD54F0) !important;
+	-webkit-transform: 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+	-moz-transition-property:width,height,background,font-size,opacity;
+}
+
+.TableRow--is-selected {
+	background: linear-gradient(to right, #3262FF, #AD54F0) !important;
+	/* transition: background 1s; */
+	background-size: 400% 400% !important;
+
+	-webkit-animation: AnimationName 20s ease infinite !important;
+	-moz-animation: AnimationName 20s ease infinite !important;
+	animation: AnimationName 20s ease infinite !important;
+}
+
+.TableRow--is-hover-forced, .TableRow:hover{
+	background: linear-gradient(to right, #3262FF, #AD54F0) !important;
+	-webkit-transform: 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+	-moz-transition-property:width,height,background,font-size,opacity;
+}
+
+

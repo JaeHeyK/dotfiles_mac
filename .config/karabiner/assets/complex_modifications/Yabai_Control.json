@@ -264,7 +264,7 @@
             ]
         },
 			{
-            "description": "Move window to left space",
+            "description": "Move window to prev space",
             "manipulators": [
               {
                 "type": "basic",
@@ -279,14 +279,14 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/usr/local/bin/yabai -m window --space prev && /usr/local/bin/yabai -m space --focus prev"
-                  }
+                    "shell_command": "/usr/local/bin/yabai -m query --windows --window $YABAI_WINDOW_ID | /usr/local/bin/jq '.id' | /usr/bin/xargs -I% sh -c ' /usr/local/bin/yabai -m window --space prev && /usr/local/bin/yabai -m space --focus prev || /usr/local/bin/yabai -m window --space last && /usr/local/bin/yabai -m space --focus last; echo % ' | /usr/bin/xargs -I% sh -c '/usr/local/bin/yabai -m window --focus %'"
+									}
                 ]
               }
             ]
 				},
         {
-          "description": "Move window to right space",
+          "description": "Move window to next space",
           "manipulators": [
             {
               "type": "basic",
@@ -301,9 +301,8 @@
               },
               "to": [
                 {
-                  "shell_command": "/usr/local/bin/yabai -m window --space next && /usr/local/bin/yabai -m space --focus next"
-
-                }
+                  "shell_command": "/usr/local/bin/yabai -m query --windows --window $YABAI_WINDOW_ID | /usr/local/bin/jq '.id' | /usr/bin/xargs -I% sh -c ' /usr/local/bin/yabai -m window --space next && /usr/local/bin/yabai -m space --focus next || /usr/local/bin/yabai -m window --space first && /usr/local/bin/yabai -m space --focus first; echo % ' | /usr/bin/xargs -I% sh -c '/usr/local/bin/yabai -m window --focus %'"	
+								}
               ]
             }
           ]
@@ -318,7 +317,7 @@
                 "modifiers": {
                   "mandatory": [
                     "left_gui",
-                    "left_option"
+										"left_option"
                   ]
                 }
               },
@@ -341,7 +340,7 @@
                 "modifiers": {
                   "mandatory": [
                     "left_gui",
-                    "left_option"
+										"left_option"
                   ]
                 }
               },
@@ -363,7 +362,7 @@
                 "modifiers": {
                   "mandatory": [
                     "left_gui",
-                    "left_option"
+										"left_option"
                   ]
                 }
               },
@@ -385,8 +384,8 @@
                 "modifiers": {
                   "mandatory": [
                     "left_gui",
-                    "left_option"
-                  ]
+                  	"left_option"
+									]
                 }
               },
               "to": [
@@ -413,7 +412,7 @@
               },
               "to": [
                 {
-                  "shell_command": "/usr/local/bin/yabai -m space --focus prev"
+                  "shell_command": "/usr/local/bin/yabai -m space --focus prev || /usr/local/bin/yabai -m space --focus last"
                 }
               ]
             }
@@ -435,7 +434,29 @@
               },
               "to": [
                 {
-                  "shell_command": "/usr/local/bin/yabai -m space --focus next"
+                  "shell_command": "/usr/local/bin/yabai -m space --focus next || /usr/local/bin/yabai -m space --focus first"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Toggle Float",
+          "manipulators": [
+            {
+              "type": "basic",
+              "from": {
+                "key_code": "f",
+                "modifiers": {
+                  "mandatory": [
+                    "left_shift",
+                    "left_gui"
+                  ]
+                }
+              },
+              "to": [
+                {
+                  "shell_command": "/usr/local/bin/yabai -m window $YABAI_WINDOW_ID --toggle float"
                 }
               ]
             }
