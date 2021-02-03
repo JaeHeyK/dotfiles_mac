@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # global settings
 
@@ -34,6 +35,15 @@ yabai -m config left_padding                 20
 yabai -m config right_padding                20
 yabai -m config window_gap                   20
 
+#==========Space_Label===============
+yabai -m space 1 --label Code
+yabai -m space 2 --label Studio
+yabai -m space 3 --label Web
+yabai -m space 4 --label Music
+yabai -m space 5 --label Talk
+yabai -m space 6 --label OBS
+yabai -m space 7 --label Art
+
 # rules
 yabai -m rule --add label="finder" app="^Finder$" manage=off
 yabai -m rule --add label="system pref" app="^시스템 환경설정$" manage=off
@@ -46,7 +56,7 @@ yabai -m rule --add label="karabiner" app="Karabiner*" manage=off
 yabai -m rule --add label="Speedtest" app="Speedtest" manage=off
 yabai -m rule --add label="keka" app="Keka*" manage=off
 yabai -m rule --add label="btt" app="BetterTouchTool" manage=off
-yabai -m rule --add label="spotify to space 1" app="Spotify"
+yabai -m rule --add label="spotify to music space" app="Spotify" space="Music"
 yabai -m rule --add label="iterm to space 1" app="iTerm2"
 yabai -m rule --add label="scrcpy float" app="scrcpy" manage=off
 yabai -m rule --add label="System Info" title="시스템 정보" manage=off
@@ -95,15 +105,6 @@ yabai -m signal --add event=window_destroyed action="osascript -e 'tell applicat
 # Refresh process widget when current window title changes
 yabai -m signal --add event=window_title_changed action="osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-process-jsx\"'"
 
-
-#==========Space_Label===============
-yabai -m space 1 --label Code
-yabai -m space 2 --label Web
-yabai -m space 3 --label Studio
-yabai -m space 4 --label Music
-yabai -m space 5 --label Talk
-yabai -m space 6 --label OBS
-yabai -m space 7 --label Art
 
 
 echo "yabai configuration loaded.."
