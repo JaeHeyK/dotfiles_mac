@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="240" height="220" viewBox="0 0 240 220" version="1.1" id="svg1824" sodipodi:docname="empty-friend-feed-top-2.svg" inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+  <metadata id="metadata1828">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1880" inkscape:window-height="982" id="namedview1826" showgrid="false" inkscape:zoom="3.3409091" inkscape:cx="120" inkscape:cy="110" inkscape:window-x="1300" inkscape:window-y="50" inkscape:window-maximized="0" inkscape:current-layer="g1816"/>
+  <title id="title1787">Top</title>
+  <defs id="defs1801">
+    <path id="a" d="M0 0h240v220H0z"/>
+    <linearGradient x1="73.2635377%" y1="72.6367393%" x2="48.7203963%" y2="27.7430646%" id="c">
+      <stop offset="0%" id="stop1790" stop-color="#36394a"/>
+      <stop offset="100%" id="stop1792" stop-color="#282a36"/>
+    </linearGradient>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="d" xlink:href="#c">
+      <stop stop-opacity="0" offset="0%" id="stop1795" stop-color="#1d1f28"/>
+      <stop offset="100%" id="stop1797" style="stop-color:#1d1f28;stop-opacity:1" stop-color="#16181f"/>
+    </linearGradient>
+    <path id="e" d="M0 0h240v220H0z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" id="g1822">
+    <g id="g1820">
+      <g id="g1818">
+        <g id="g1816">
+          <mask id="b" fill="#fff">
+            <use xlink:href="#a" id="use1803"/>
+          </mask>
+          <use fill="#121212" xlink:href="#a" id="use1806"/>
+          <g mask="url(#b)" fill-rule="nonzero" fill="url(#c)" id="g1812">
+            <g id="g1810">
+              <path d="M-178.34829812 203.8527919L143.43529466-20.36454385l-161.65590424 167.6815657 312.3406989-188.1828681-143.71523584 223.3508911 95.41288757-37.66380782-127.68937185 197.2808953" id="path1808"/>
+            </g>
+          </g>
+          <use fill="url(#d)" xlink:href="#e" id="use1814"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
